@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172C2AFCF9A4C95C0601BC03 /* Pods_SafeBodaChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C64FE30909ED698DAB8A1C3 /* Pods_SafeBodaChallenge.framework */; };
 		DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */; };
 		DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C47B1233BD43F00AC4074 /* ViewController.swift */; };
 		DC0C47B5233BD43F00AC4074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B3233BD43F00AC4074 /* Main.storyboard */; };
 		DC0C47B7233BD44200AC4074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B6233BD44200AC4074 /* Assets.xcassets */; };
 		DC0C47BA233BD44200AC4074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B8233BD44200AC4074 /* LaunchScreen.storyboard */; };
+		DC0C47C4233BD54800AC4074 /* LufthansaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C64FE30909ED698DAB8A1C3 /* Pods_SafeBodaChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SafeBodaChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA80CC6814A80405268B9093 /* Pods-SafeBodaChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeBodaChallenge.debug.xcconfig"; path = "Target Support Files/Pods-SafeBodaChallenge/Pods-SafeBodaChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		C40CAC8E9F7BB326B690020C /* Pods-SafeBodaChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeBodaChallenge.release.xcconfig"; path = "Target Support Files/Pods-SafeBodaChallenge/Pods-SafeBodaChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		DC0C47AC233BD43F00AC4074 /* SafeBodaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBodaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC0C47B1233BD43F00AC4074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,7 @@
 		DC0C47B6233BD44200AC4074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC0C47B9233BD44200AC4074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0C47BB233BD44200AC4074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LufthansaAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				172C2AFCF9A4C95C0601BC03 /* Pods_SafeBodaChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43B9D5DF2D2DC3E64767F1F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C64FE30909ED698DAB8A1C3 /* Pods_SafeBodaChallenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C6370413F1C7675EE3CEDA9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA80CC6814A80405268B9093 /* Pods-SafeBodaChallenge.debug.xcconfig */,
+				C40CAC8E9F7BB326B690020C /* Pods-SafeBodaChallenge.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		DC0C47A3233BD43F00AC4074 = {
 			isa = PBXGroup;
 			children = (
 				DC0C47AE233BD43F00AC4074 /* SafeBodaChallenge */,
 				DC0C47AD233BD43F00AC4074 /* Products */,
+				4C6370413F1C7675EE3CEDA9 /* Pods */,
+				43B9D5DF2D2DC3E64767F1F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +81,8 @@
 		DC0C47AE233BD43F00AC4074 /* SafeBodaChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				DC0C47C2233BD52F00AC4074 /* Singletons */,
+				DC0C47C1233BD51800AC4074 /* ViewControllers */,
 				DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */,
 				DC0C47B1233BD43F00AC4074 /* ViewController.swift */,
 				DC0C47B3233BD43F00AC4074 /* Main.storyboard */,
@@ -64,6 +93,21 @@
 			path = SafeBodaChallenge;
 			sourceTree = "<group>";
 		};
+		DC0C47C1233BD51800AC4074 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DC0C47C2233BD52F00AC4074 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DC0C47BE233BD44200AC4074 /* Build configuration list for PBXNativeTarget "SafeBodaChallenge" */;
 			buildPhases = (
+				662906323B66075E0940C893 /* [CP] Check Pods Manifest.lock */,
 				DC0C47A8233BD43F00AC4074 /* Sources */,
 				DC0C47A9233BD43F00AC4074 /* Frameworks */,
 				DC0C47AA233BD43F00AC4074 /* Resources */,
+				CB30BC048191A31BA859A8E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +176,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		662906323B66075E0940C893 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SafeBodaChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB30BC048191A31BA859A8E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeBodaChallenge/Pods-SafeBodaChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SafeBodaChallenge/Pods-SafeBodaChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SafeBodaChallenge/Pods-SafeBodaChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DC0C47A8233BD43F00AC4074 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -137,6 +225,7 @@
 			files = (
 				DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */,
 				DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */,
+				DC0C47C4233BD54800AC4074 /* LufthansaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +369,7 @@
 		};
 		DC0C47BF233BD44200AC4074 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA80CC6814A80405268B9093 /* Pods-SafeBodaChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +388,7 @@
 		};
 		DC0C47C0233BD44200AC4074 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C40CAC8E9F7BB326B690020C /* Pods-SafeBodaChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
