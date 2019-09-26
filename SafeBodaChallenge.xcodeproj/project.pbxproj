@@ -19,6 +19,7 @@
 		DC9F7B44233BEE7200CCA38B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B43233BEE7200CCA38B /* ResultsViewController.swift */; };
 		DC9F7B46233BEE7D00CCA38B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B45233BEE7D00CCA38B /* MapViewController.swift */; };
 		DC9F7B49233BF16A00CCA38B /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B48233BF16A00CCA38B /* ResultTableViewCell.swift */; };
+		DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4A233D533A00CCA38B /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		DC9F7B43233BEE7200CCA38B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		DC9F7B45233BEE7D00CCA38B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DC9F7B48233BF16A00CCA38B /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		DC9F7B4A233D533A00CCA38B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				DC0C47C2233BD52F00AC4074 /* Singletons */,
 				DC0C47C1233BD51800AC4074 /* ViewControllers */,
 				DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */,
+				DC9F7B4A233D533A00CCA38B /* Utils.swift */,
 				DC0C47B1233BD43F00AC4074 /* ViewController.swift */,
 				DC0C47B3233BD43F00AC4074 /* Main.storyboard */,
 				DC0C47B6233BD44200AC4074 /* Assets.xcassets */,
@@ -247,6 +250,7 @@
 			files = (
 				DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */,
 				DC9F7B42233BEBCF00CCA38B /* DestinationSelectionViewController.swift in Sources */,
+				DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */,
 				DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */,
 				DC0C47C4233BD54800AC4074 /* LufthansaAPI.swift in Sources */,
 				DC9F7B40233BEBBA00CCA38B /* OriginSelectionViewController.swift in Sources */,

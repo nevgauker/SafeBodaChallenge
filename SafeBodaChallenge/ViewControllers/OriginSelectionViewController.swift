@@ -12,6 +12,11 @@ class OriginSelectionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        LufthansaAPI.shared.fetchAirports(completion: {error,data in
+        
+        
+        })
 
         // Do any additional setup after loading the view.
     }
