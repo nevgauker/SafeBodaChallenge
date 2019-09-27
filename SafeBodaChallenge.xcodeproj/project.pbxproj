@@ -20,6 +20,13 @@
 		DC9F7B46233BEE7D00CCA38B /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B45233BEE7D00CCA38B /* MapViewController.swift */; };
 		DC9F7B49233BF16A00CCA38B /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B48233BF16A00CCA38B /* ResultTableViewCell.swift */; };
 		DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4A233D533A00CCA38B /* Utils.swift */; };
+		DC9F7B4E233E2A7F00CCA38B /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4D233E2A7F00CCA38B /* Airport.swift */; };
+		DC9F7B50233E399A00CCA38B /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4F233E399A00CCA38B /* Extenstions.swift */; };
+		DC9F7B52233E3E0200CCA38B /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B51233E3E0200CCA38B /* AppData.swift */; };
+		DC9F7B54233E425100CCA38B /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B53233E425100CCA38B /* AirportsViewController.swift */; };
+		DC9F7B56233E482E00CCA38B /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */; };
+		DC9F7B58233E75DF00CCA38B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B57233E75DF00CCA38B /* City.swift */; };
+		DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		DC9F7B45233BEE7D00CCA38B /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		DC9F7B48233BF16A00CCA38B /* ResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		DC9F7B4A233D533A00CCA38B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DC9F7B4D233E2A7F00CCA38B /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
+		DC9F7B4F233E399A00CCA38B /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		DC9F7B51233E3E0200CCA38B /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		DC9F7B53233E425100CCA38B /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewController.swift; sourceTree = "<group>"; };
+		DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
+		DC9F7B57233E75DF00CCA38B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,7 @@
 		DC0C47AE233BD43F00AC4074 /* SafeBodaChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				DC9F7B4C233E2A6600CCA38B /* Model */,
 				DC9F7B47233BF14800CCA38B /* Views */,
 				DC0C47C2233BD52F00AC4074 /* Singletons */,
 				DC0C47C1233BD51800AC4074 /* ViewControllers */,
@@ -102,6 +117,7 @@
 				DC0C47B6233BD44200AC4074 /* Assets.xcassets */,
 				DC0C47B8233BD44200AC4074 /* LaunchScreen.storyboard */,
 				DC0C47BB233BD44200AC4074 /* Info.plist */,
+				DC9F7B4F233E399A00CCA38B /* Extenstions.swift */,
 			);
 			path = SafeBodaChallenge;
 			sourceTree = "<group>";
@@ -113,6 +129,7 @@
 				DC9F7B41233BEBCF00CCA38B /* DestinationSelectionViewController.swift */,
 				DC9F7B43233BEE7200CCA38B /* ResultsViewController.swift */,
 				DC9F7B45233BEE7D00CCA38B /* MapViewController.swift */,
+				DC9F7B53233E425100CCA38B /* AirportsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -121,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */,
+				DC9F7B51233E3E0200CCA38B /* AppData.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -129,8 +147,19 @@
 			isa = PBXGroup;
 			children = (
 				DC9F7B48233BF16A00CCA38B /* ResultTableViewCell.swift */,
+				DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */,
+				DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DC9F7B4C233E2A6600CCA38B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC9F7B4D233E2A7F00CCA38B /* Airport.swift */,
+				DC9F7B57233E75DF00CCA38B /* City.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,12 +280,19 @@
 				DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */,
 				DC9F7B42233BEBCF00CCA38B /* DestinationSelectionViewController.swift in Sources */,
 				DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */,
+				DC9F7B56233E482E00CCA38B /* AirportTableViewCell.swift in Sources */,
 				DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */,
 				DC0C47C4233BD54800AC4074 /* LufthansaAPI.swift in Sources */,
+				DC9F7B4E233E2A7F00CCA38B /* Airport.swift in Sources */,
+				DC9F7B50233E399A00CCA38B /* Extenstions.swift in Sources */,
 				DC9F7B40233BEBBA00CCA38B /* OriginSelectionViewController.swift in Sources */,
 				DC9F7B44233BEE7200CCA38B /* ResultsViewController.swift in Sources */,
+				DC9F7B54233E425100CCA38B /* AirportsViewController.swift in Sources */,
+				DC9F7B58233E75DF00CCA38B /* City.swift in Sources */,
 				DC9F7B49233BF16A00CCA38B /* ResultTableViewCell.swift in Sources */,
 				DC9F7B46233BEE7D00CCA38B /* MapViewController.swift in Sources */,
+				DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */,
+				DC9F7B52233E3E0200CCA38B /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

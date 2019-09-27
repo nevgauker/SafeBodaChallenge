@@ -16,7 +16,7 @@ class Utils: NSObject {
         let saveSuccessful: Bool = keychainWrapper.set(token, forKey:"token")
         return saveSuccessful
     }
-    class func loadToken(token:String)->String? {
+    class func loadToken()->String? {
         let keychainWrapper = KeychainWrapper.standard
 
         let retrievedString: String? = keychainWrapper.string(forKey:"token")
