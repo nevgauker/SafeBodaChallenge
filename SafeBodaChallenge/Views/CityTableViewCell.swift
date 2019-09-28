@@ -34,7 +34,13 @@ class CityTableViewCell: UITableViewCell {
     }
     func updateData(city:City){
         nameLabel.text = city.name["$"] as? String
-        cityCountryCodesLabel.text = city.cityCode + " - " + city.countryCode
+        cityCountryCodesLabel.text = city.countryCode
+        if let country = CountriesCache.shared.countryByCode(countryCode: city.countryCode){
+            if let name = country.name["$"] as? String {
+                cityCountryCodesLabel.text = name
+            }
+        }
+        
         let aitportsCount = city.airports.count
         
         if aitportsCount  ==  0 {

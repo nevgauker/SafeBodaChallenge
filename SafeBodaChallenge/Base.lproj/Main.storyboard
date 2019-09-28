@@ -324,6 +324,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bOM-8M-6Nx"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="gPk-Q9-bJG" id="iUp-sc-ez6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQS-7h-TEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -337,6 +340,8 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QmM-Ro-567">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.95234292750000005" green="0.70532125229999998" blue="0.24685484169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.95234292750000005" green="0.70532125229999998" blue="0.24685484169999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

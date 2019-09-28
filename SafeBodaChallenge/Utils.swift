@@ -10,7 +10,7 @@ import Foundation
 import SwiftKeychainWrapper
 
 class Utils: NSObject {
-
+    
     class func saveToken(token:String)->Bool {
         let keychainWrapper = KeychainWrapper.standard
         let saveSuccessful: Bool = keychainWrapper.set(token, forKey:"token")

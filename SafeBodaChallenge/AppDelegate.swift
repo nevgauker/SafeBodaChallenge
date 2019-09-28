@@ -17,6 +17,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         if let token = Utils.loadToken() {
             LufthansaAPI.shared.setToken(token: token)
+            LufthansaAPI.shared.fetchCountries(completion: { error, countries in
+                if error == nil {
+                    if let arr = countries {
+                        CountriesCache.shared.cacheSetup(arr: arr)
+                    }
+                }else {
+                    //handle error
+                }
+                
+            })
+        } else {
+            LufthansaAPI.shared.fetchToken(completion: {error,success in
+                if error == nil && success {
+                    LufthansaAPI.shared.fetchCountries(completion: { error,countries in
+                        if error == nil {
+                            if let arr = countries {
+                                CountriesCache.shared.cacheSetup(arr: arr)
+                            }
+                        }else {
+                            //handle error
+                        }
+                    })
+                    
+                }
+            })
+            
+            
         }
 
         return true

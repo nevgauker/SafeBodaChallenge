@@ -14,6 +14,8 @@
 		DC0C47B7233BD44200AC4074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B6233BD44200AC4074 /* Assets.xcassets */; };
 		DC0C47BA233BD44200AC4074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B8233BD44200AC4074 /* LaunchScreen.storyboard */; };
 		DC0C47C4233BD54800AC4074 /* LufthansaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */; };
+		DC908658233FDAD1005A9333 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC908657233FDAD1005A9333 /* Country.swift */; };
+		DC90865A233FDD9A005A9333 /* CountriesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC908659233FDD9A005A9333 /* CountriesCache.swift */; };
 		DC9F7B40233BEBBA00CCA38B /* OriginSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B3F233BEBBA00CCA38B /* OriginSelectionViewController.swift */; };
 		DC9F7B42233BEBCF00CCA38B /* DestinationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B41233BEBCF00CCA38B /* DestinationSelectionViewController.swift */; };
 		DC9F7B44233BEE7200CCA38B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B43233BEE7200CCA38B /* ResultsViewController.swift */; };
@@ -30,6 +32,9 @@
 		DC9F7B5C233F6BBE00CCA38B /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B5B233F6BBE00CCA38B /* Schedule.swift */; };
 		DC9F7B5F233F89B100CCA38B /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B5D233F89B100CCA38B /* FlightTableViewCell.swift */; };
 		DC9F7B60233F89B100CCA38B /* FlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9F7B5E233F89B100CCA38B /* FlightTableViewCell.xib */; };
+		DC9F7B63233FA2B000CCA38B /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B62233FA2B000CCA38B /* Line.swift */; };
+		DC9F7B65233FC00A00CCA38B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9F7B64233FC00A00CCA38B /* CoreLocation.framework */; };
+		DC9F7B67233FC01400CCA38B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9F7B66233FC01400CCA38B /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +49,8 @@
 		DC0C47B9233BD44200AC4074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0C47BB233BD44200AC4074 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LufthansaAPI.swift; sourceTree = "<group>"; };
+		DC908657233FDAD1005A9333 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		DC908659233FDD9A005A9333 /* CountriesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesCache.swift; sourceTree = "<group>"; };
 		DC9F7B3F233BEBBA00CCA38B /* OriginSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginSelectionViewController.swift; sourceTree = "<group>"; };
 		DC9F7B41233BEBCF00CCA38B /* DestinationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSelectionViewController.swift; sourceTree = "<group>"; };
 		DC9F7B43233BEE7200CCA38B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +67,9 @@
 		DC9F7B5B233F6BBE00CCA38B /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		DC9F7B5D233F89B100CCA38B /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
 		DC9F7B5E233F89B100CCA38B /* FlightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightTableViewCell.xib; sourceTree = "<group>"; };
+		DC9F7B62233FA2B000CCA38B /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		DC9F7B64233FC00A00CCA38B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC9F7B66233FC01400CCA38B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +77,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9F7B67233FC01400CCA38B /* MapKit.framework in Frameworks */,
+				DC9F7B65233FC00A00CCA38B /* CoreLocation.framework in Frameworks */,
 				172C2AFCF9A4C95C0601BC03 /* Pods_SafeBodaChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,6 +89,8 @@
 		43B9D5DF2D2DC3E64767F1F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC9F7B66233FC01400CCA38B /* MapKit.framework */,
+				DC9F7B64233FC00A00CCA38B /* CoreLocation.framework */,
 				7C64FE30909ED698DAB8A1C3 /* Pods_SafeBodaChallenge.framework */,
 			);
 			name = Frameworks;
@@ -112,6 +126,7 @@
 		DC0C47AE233BD43F00AC4074 /* SafeBodaChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				DC9F7B61233FA28800CCA38B /* MapData */,
 				DC9F7B4C233E2A6600CCA38B /* Model */,
 				DC9F7B47233BF14800CCA38B /* Views */,
 				DC0C47C2233BD52F00AC4074 /* Singletons */,
@@ -145,6 +160,7 @@
 			children = (
 				DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */,
 				DC9F7B51233E3E0200CCA38B /* AppData.swift */,
+				DC908659233FDD9A005A9333 /* CountriesCache.swift */,
 			);
 			path = Singletons;
 			sourceTree = "<group>";
@@ -167,8 +183,17 @@
 				DC9F7B4D233E2A7F00CCA38B /* Airport.swift */,
 				DC9F7B57233E75DF00CCA38B /* City.swift */,
 				DC9F7B5B233F6BBE00CCA38B /* Schedule.swift */,
+				DC908657233FDAD1005A9333 /* Country.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DC9F7B61233FA28800CCA38B /* MapData */ = {
+			isa = PBXGroup;
+			children = (
+				DC9F7B62233FA2B000CCA38B /* Line.swift */,
+			);
+			path = MapData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */,
+				DC90865A233FDD9A005A9333 /* CountriesCache.swift in Sources */,
 				DC9F7B42233BEBCF00CCA38B /* DestinationSelectionViewController.swift in Sources */,
 				DC9F7B5C233F6BBE00CCA38B /* Schedule.swift in Sources */,
 				DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */,
@@ -295,6 +321,7 @@
 				DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */,
 				DC0C47C4233BD54800AC4074 /* LufthansaAPI.swift in Sources */,
 				DC9F7B4E233E2A7F00CCA38B /* Airport.swift in Sources */,
+				DC908658233FDAD1005A9333 /* Country.swift in Sources */,
 				DC9F7B50233E399A00CCA38B /* Extenstions.swift in Sources */,
 				DC9F7B40233BEBBA00CCA38B /* OriginSelectionViewController.swift in Sources */,
 				DC9F7B44233BEE7200CCA38B /* ResultsViewController.swift in Sources */,
@@ -302,6 +329,7 @@
 				DC9F7B58233E75DF00CCA38B /* City.swift in Sources */,
 				DC9F7B5F233F89B100CCA38B /* FlightTableViewCell.swift in Sources */,
 				DC9F7B49233BF16A00CCA38B /* ResultTableViewCell.swift in Sources */,
+				DC9F7B63233FA2B000CCA38B /* Line.swift in Sources */,
 				DC9F7B46233BEE7D00CCA38B /* MapViewController.swift in Sources */,
 				DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */,
 				DC9F7B52233E3E0200CCA38B /* AppData.swift in Sources */,

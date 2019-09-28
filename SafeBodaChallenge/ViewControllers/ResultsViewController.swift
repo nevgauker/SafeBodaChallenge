@@ -21,7 +21,13 @@ extension ResultsViewController : UITableViewDataSource {
 }
 extension ResultsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // performSegue(withIdentifier: "mapSegue", sender: self)
+        
+        self.selected = sceduals[indexPath.row]
+        performSegue(withIdentifier: "mapSegue", sender: self)
+       
+        
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
@@ -31,6 +37,7 @@ class ResultsViewController: UIViewController {
     
     
     var sceduals:[Schedule] = [Schedule]()
+    var selected:Schedule? = nil
     let dateToFetch:Date = Date()
     
     
@@ -43,12 +50,15 @@ class ResultsViewController: UIViewController {
     
     func fetchSceduals() {
         let dateStr =  Utils.convertDateFormatter(date: dateToFetch)
+        self.showLoader()
         if LufthansaAPI.shared.needToFetchToken() {
             LufthansaAPI.shared.fetchSchedules(origin: "AMS", destination: "TXL", fromdate: dateStr, completion: { error,schedules in
+                self.hideLoader()
                 self.handleRespose(error: error, schedules: schedules)
             })
         }else {
             LufthansaAPI.shared.fetchSchedules(origin: "AMS", destination: "TXL", fromdate: dateStr, completion: { error,schedules in
+                 self.hideLoader()
                 self.handleRespose(error: error, schedules: schedules)
             })
         }
@@ -65,6 +75,15 @@ class ResultsViewController: UIViewController {
             }
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mapSegue" {
+            if let sel = self.selected {
+                let vc = segue.destination as! MapViewController
+                vc.flights = sel.flights
+            }
+        }
     }
     
 }

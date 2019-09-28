@@ -12,8 +12,8 @@ import Foundation
 struct Airport {
     var airportCode:String = ""
     var name:String = ""
-    var latitude:Float = 0.0
-    var longitude:Float = 0.0
+    var latitude:Double = 0.0
+    var longitude:Double = 0.0
     
     init(data:[String : Any]) {
         if let names  = data["Names"] as? [String : Any]{
@@ -31,10 +31,10 @@ struct Airport {
         
         if let position  = data["Position"] as? [String : Any]{
             if let coordinate  = position["Coordinate"] as? [String : Any]{
-                if let val  = coordinate["Latitude"] as? Float{
+                if let val  = coordinate["Latitude"] as? Double{
                    latitude = val
                 }
-                if let val  = coordinate["Longitude"] as? Float{
+                if let val  = coordinate["Longitude"] as? Double{
                     longitude = val
                 }
             

@@ -24,6 +24,7 @@ extension OriginSelectionViewController:UITableViewDataSource {
 
 extension OriginSelectionViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         self.airportSelection(index: indexPath)
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -53,9 +54,12 @@ class OriginSelectionViewController: UIViewController {
     }
     
     func fetchCities() {
+        
+        showLoader()
         if LufthansaAPI.shared.needToFetchToken() {
             LufthansaAPI.shared.fetchToken(completion: {error,success in
                 LufthansaAPI.shared.fetchCities(index: self.index, completion: { error,cities in
+                    self.hideLoader()
                     if error == nil {
                         if let theCities = cities {
                                self.cities.append(contentsOf: theCities)
@@ -69,6 +73,7 @@ class OriginSelectionViewController: UIViewController {
             })
         }else {
             LufthansaAPI.shared.fetchCities(index: self.index, completion: { error,cities in
+                self.hideLoader()
                 if error == nil {
                     if let theCities = cities {
                         self.cities.append(contentsOf: theCities)

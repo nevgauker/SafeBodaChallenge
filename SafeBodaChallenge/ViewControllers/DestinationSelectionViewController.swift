@@ -13,7 +13,7 @@ class DestinationSelectionViewController: OriginSelectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Choose a destination"
+        self.title = "Choose a city of destination"
         // Do any additional setup after loading the view.
     }
     override func didSelectAirport(airport:String){

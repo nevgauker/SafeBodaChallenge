@@ -70,6 +70,7 @@ final class LufthansaAPI: NSObject {
         
         let urlString = baseUrlStr + "mds-references/cities"
         
+        
         let parameters = ["limit" : numberOfResults, "offset" : index ]
         
         Alamofire.request(urlString, method: .get, parameters: parameters as Parameters, encoding: URLEncoding.default, headers: defaultHeaders)
@@ -96,9 +97,36 @@ final class LufthansaAPI: NSObject {
                 }
         }
     }
+    func fetchCountries(completion: @escaping (_ error:String?, _ countries : [Country]?) -> ()){
+        
+        let urlString = baseUrlStr + "mds-references/countries"
+        Alamofire.request(urlString, method: .get, parameters: nil, encoding: URLEncoding.default, headers: defaultHeaders)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                return .success
+            }
+            .responseJSON { response in
+                if let dict = response.result.value as? Dictionary<String,AnyObject>{
+                    if let countriesData = self.handleCountryRespose(dict: dict) {
+                        var arr:[Country] = [Country]()
+                        for countryData in countriesData {
+                            let country:Country = Country(data: countryData)
+                            arr.append(country)
+                        }
+                        completion(nil,arr)
+                    }else {
+                        completion(response.error?.localizedDescription,nil)
+                    }
+                }else {
+                    completion(response.error?.localizedDescription,nil)
+                }
+        }
+    }
     
     func fetchAirports(index:Int,airportCode:String?,
-                       completion: @escaping (_ error:String?,_ success:Bool) -> ()){
+                       completion: @escaping (_ error:String?,_ airports:[Airport]?) -> ()){
         
         var urlString = baseUrlStr + "mds-references/airports"
         
@@ -117,14 +145,16 @@ final class LufthansaAPI: NSObject {
             .responseJSON { response in
                 if let dict = response.result.value as? Dictionary<String,AnyObject>{
                     if let airportsData = self.handleAirportRespose(dict: dict) {
-                        AppData.shared.handleAirportsData(data: airportsData)
-                         completion(nil,true)
-                    }else {
-                         completion(response.error?.localizedDescription,false)
-                    }
+                        var arr:[Airport] = [Airport]()
+                        for airportData in airportsData {
+                            let airport:Airport = Airport(data: airportData)
+                            arr.append(airport)
+                        }
+                        completion(nil,arr)
                 }else {
-                    completion(response.error?.localizedDescription,false)
+                    completion(response.error?.localizedDescription,nil)
                 }
+        }
         }
     }
     
@@ -133,9 +163,6 @@ final class LufthansaAPI: NSObject {
                        completion: @escaping (_ error:String?,_ schedules:[Schedule]?) -> ()){
         
         let urlString = baseUrlStr + "operations/schedules/" + origin + "/" + destination + "/" + fromdate
-        
-        //let parameters = ["origin" : origin, "destination" : destination, "fromDateTime" : fromdate]
-        
         Alamofire.request(urlString, method: .get, parameters: nil, encoding: URLEncoding.default, headers: defaultHeaders)
             .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
                 print("Progress: \(progress.fractionCompleted)")
@@ -174,6 +201,10 @@ final class LufthansaAPI: NSObject {
                 if let airports = airportResource["Airports"]  as? [String : Any]{
                     if let airport = airports["Airport"] as? [[String : Any]] {
                         return airport
+                    }else if let airport = airports["Airport"] as? [String : Any] {
+                        var arr:[[String : Any]] = [[String : Any]]()
+                        arr.append(airport)
+                        return arr
                     }
                 }
             }
@@ -185,6 +216,25 @@ final class LufthansaAPI: NSObject {
             if let cities = cityResource["Cities"]  as? [String : Any]{
                 if let city = cities["City"] as? [[String : Any]] {
                     return city
+                }else if let city = cities["City"] as? [String : Any] {
+                    var arr:[[String : Any]] = [[String : Any]]()
+                    arr.append(city)
+                    return arr
+                }
+            }
+        }
+        return nil
+    }
+    
+    private func handleCountryRespose(dict:[String : Any])->[[String : Any]]?{
+        if let cityResource = dict["CountryResource"]  as? [String : Any]{
+            if let countries = cityResource["Countries"]  as? [String : Any]{
+                if let country = countries["Country"] as? [[String : Any]] {
+                    return country
+                }else if let country = countries["Country"] as? [String : Any] {
+                    var arr:[[String : Any]] = [[String : Any]]()
+                    arr.append(country)
+                    return arr
                 }
             }
         }

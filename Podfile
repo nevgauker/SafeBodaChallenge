@@ -8,5 +8,6 @@ target 'SafeBodaChallenge' do
   # Pods for SafeBodaChallenge
 	pod 'Alamofire'
   pod 'SwiftKeychainWrapper'
+  pod 'ANLoader'
 
 end

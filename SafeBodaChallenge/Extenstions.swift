@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import ANLoader
 
 extension Dictionary {
     var jsonStringRepresentation: String? {
@@ -28,4 +28,22 @@ extension NSMutableAttributedString{
             addAttribute(NSAttributedString.Key.foregroundColor, value: color, range: range)
         }
     }
+}
+
+extension UIViewController {
+    
+    func showLoader() {
+     //   ANLoader.showLoading("Loading", disableUI: true)
+
+//        ANLoader.pulseAnimation = true //It will animate your Loading
+//        ANLoader.activityColor = .red
+//        ANLoader.activityBackgroundColor = .blue
+//        ANLoader.activityTextColor = .clear
+    }
+    
+    func hideLoader() {
+      // ANLoader.hide()
+    }
+    
+    
 }
