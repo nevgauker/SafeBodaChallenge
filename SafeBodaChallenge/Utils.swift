@@ -28,6 +28,23 @@ class Utils: NSObject {
         let removeSuccessful: Bool = keychainWrapper.removeObject(forKey:"token")
         return removeSuccessful
     }
+    
+    
+    
+    class func convertDateFormatter(date: Date) -> String {
+        
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        let dateStr = df.string(from: date)
+        return dateStr
+        
+        
+    }
+        
+        
+        
+     
+
 
 
 }

@@ -49,13 +49,12 @@ class OriginSelectionViewController: UIViewController {
         fetchCities()
         self.title = "Choose an city of origin"
         
+        
     }
     
     func fetchCities() {
-        
         if LufthansaAPI.shared.needToFetchToken() {
             LufthansaAPI.shared.fetchToken(completion: {error,success in
-                
                 LufthansaAPI.shared.fetchCities(index: self.index, completion: { error,cities in
                     if error == nil {
                         if let theCities = cities {
@@ -63,36 +62,54 @@ class OriginSelectionViewController: UIViewController {
                             self.index = self.cities.count
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
-                                    
                                 }
                         }
                     }
-                    
-                    
                 })
-                
             })
-            
-            
         }else {
-            LufthansaAPI.shared.fetchCities(index: 0, completion: { error,cities in
+            LufthansaAPI.shared.fetchCities(index: self.index, completion: { error,cities in
                 if error == nil {
                     if let theCities = cities {
                         self.cities.append(contentsOf: theCities)
+                        self.index = self.cities.count
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                             
                         }
                     }
                 }
-                
-                
             })
         }
+    }
+            
+            
+        
+                
+                
+          
+
+                
+            
+            
+            
+//
+//            LufthansaAPI.shared.fetchCities(index: 0, completion: { error,cities in
+//                if error == nil {
+//                    if let theCities = cities {
+//                        self.cities.append(contentsOf: theCities)
+//                        DispatchQueue.main.async {
+//                            self.tableView.reloadData()
+//
+//                        }
+//                    }
+//                }
+//
+//
+//            })
+  //      }
         
        
-       
-    }
     
     func airportSelection(index:IndexPath) {
         

@@ -225,18 +225,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8yE-dO-M5j">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8yE-dO-M5j">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultTableViewCell" rowHeight="80" id="ewu-iC-sGo" customClass="ResultTableViewCell" customModule="SafeBodaChallenge" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ResultTableViewCell" rowHeight="200" id="ewu-iC-sGo" customClass="ResultTableViewCell" customModule="SafeBodaChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ewu-iC-sGo" id="yt5-fq-qAF">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="79.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="53I-Ci-pBi">
+                                                    <rect key="frame" x="5" y="5" width="404" height="190"/>
+                                                    <subviews>
+                                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xCb-Ko-ua2">
+                                                            <rect key="frame" x="5" y="70" width="394" height="117"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <prototypes>
+                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="e59-nU-hhD">
+                                                                    <rect key="frame" x="0.0" y="28" width="394" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e59-nU-hhD" id="ivt-oE-qRX">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="394" height="49.5"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                    </tableViewCellContentView>
+                                                                </tableViewCell>
+                                                            </prototypes>
+                                                            <connections>
+                                                                <outlet property="dataSource" destination="ewu-iC-sGo" id="MtV-kD-J8p"/>
+                                                            </connections>
+                                                        </tableView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="xCb-Ko-ua2" secondAttribute="bottom" constant="3" id="AYn-A3-zyU"/>
+                                                        <constraint firstItem="xCb-Ko-ua2" firstAttribute="top" secondItem="53I-Ci-pBi" secondAttribute="top" constant="70" id="BxR-ld-xSU"/>
+                                                        <constraint firstItem="xCb-Ko-ua2" firstAttribute="leading" secondItem="53I-Ci-pBi" secondAttribute="leading" constant="5" id="DGt-L5-gLK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xCb-Ko-ua2" secondAttribute="trailing" constant="5" id="p26-L4-q9H"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="53I-Ci-pBi" firstAttribute="top" secondItem="yt5-fq-qAF" secondAttribute="top" constant="5" id="5Me-yO-P6R"/>
+                                                <constraint firstItem="53I-Ci-pBi" firstAttribute="leading" secondItem="yt5-fq-qAF" secondAttribute="leading" constant="5" id="ZgB-ex-hsZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="53I-Ci-pBi" secondAttribute="bottom" constant="5" id="hUm-4o-sYE"/>
+                                                <constraint firstAttribute="trailing" secondItem="53I-Ci-pBi" secondAttribute="trailing" constant="5" id="zbD-74-WId"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="containerView" destination="53I-Ci-pBi" id="Qm5-KR-jmh"/>
+                                            <outlet property="flightsTableView" destination="xCb-Ko-ua2" id="bh2-ew-wkX"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -246,6 +286,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8yE-dO-M5j" firstAttribute="top" secondItem="Sdy-gW-Huz" secondAttribute="top" id="WCO-pc-ced"/>
+                            <constraint firstItem="8yE-dO-M5j" firstAttribute="trailing" secondItem="Sdy-gW-Huz" secondAttribute="trailing" id="kuU-Tw-aFF"/>
+                            <constraint firstAttribute="bottom" secondItem="8yE-dO-M5j" secondAttribute="bottom" id="sGQ-cb-51L"/>
+                            <constraint firstItem="8yE-dO-M5j" firstAttribute="leading" secondItem="Sdy-gW-Huz" secondAttribute="leading" id="whg-kh-15t"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Sdy-gW-Huz"/>
                     </view>
                     <connections>

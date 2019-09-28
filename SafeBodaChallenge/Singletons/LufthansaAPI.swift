@@ -128,6 +128,47 @@ final class LufthansaAPI: NSObject {
         }
     }
     
+    
+    func fetchSchedules(origin:String,destination:String,fromdate:String,
+                       completion: @escaping (_ error:String?,_ schedules:[Schedule]?) -> ()){
+        
+        let urlString = baseUrlStr + "operations/schedules/" + origin + "/" + destination + "/" + fromdate
+        
+        //let parameters = ["origin" : origin, "destination" : destination, "fromDateTime" : fromdate]
+        
+        Alamofire.request(urlString, method: .get, parameters: nil, encoding: URLEncoding.default, headers: defaultHeaders)
+            .downloadProgress(queue: DispatchQueue.global(qos: .utility)) { progress in
+                print("Progress: \(progress.fractionCompleted)")
+            }
+            .validate { request, response, data in
+                return .success
+            }
+            .responseJSON { response in
+                if let dict = response.result.value as? Dictionary<String,AnyObject>{
+                    
+                    if let scedualsData = self.handleScedualstRespose(dict: dict) {
+                        var sceduals:[Schedule] = [Schedule]()
+                        for scedualData in scedualsData {
+                            let scedual:Schedule = Schedule(data: scedualData)
+                            sceduals.append(scedual)
+                        }
+                        completion(nil,sceduals)
+                    }else {
+                        completion(response.error?.localizedDescription,nil)
+                    }
+                }else {
+                    completion(response.error?.localizedDescription,nil)
+                }
+                completion(nil,nil)
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
     private func handleAirportRespose(dict:[String : Any])->[[String : Any]]?{
             if let airportResource = dict["AirportResource"]  as? [String : Any]{
                 if let airports = airportResource["Airports"]  as? [String : Any]{
@@ -145,6 +186,20 @@ final class LufthansaAPI: NSObject {
                 if let city = cities["City"] as? [[String : Any]] {
                     return city
                 }
+            }
+        }
+        return nil
+    }
+
+    
+    private func handleScedualstRespose(dict:[String : Any])->[[String : Any]]?{
+        if let scheduleResource = dict["ScheduleResource"]  as? [String : Any]{
+            if let schedules = scheduleResource["Schedule"] as? [[ String  : Any]] {
+                    return schedules
+            } else if let schedule  =  scheduleResource["Schedule"] as? [String : Any]{
+                var sceduals : [[String : Any]] =  [[String : Any]]()
+                sceduals.append(schedule)
+                return sceduals
             }
         }
         return nil

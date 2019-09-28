@@ -27,6 +27,9 @@
 		DC9F7B56233E482E00CCA38B /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */; };
 		DC9F7B58233E75DF00CCA38B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B57233E75DF00CCA38B /* City.swift */; };
 		DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */; };
+		DC9F7B5C233F6BBE00CCA38B /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B5B233F6BBE00CCA38B /* Schedule.swift */; };
+		DC9F7B5F233F89B100CCA38B /* FlightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B5D233F89B100CCA38B /* FlightTableViewCell.swift */; };
+		DC9F7B60233F89B100CCA38B /* FlightTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9F7B5E233F89B100CCA38B /* FlightTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
 		DC9F7B57233E75DF00CCA38B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
+		DC9F7B5B233F6BBE00CCA38B /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		DC9F7B5D233F89B100CCA38B /* FlightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightTableViewCell.swift; sourceTree = "<group>"; };
+		DC9F7B5E233F89B100CCA38B /* FlightTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlightTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,8 @@
 				DC9F7B48233BF16A00CCA38B /* ResultTableViewCell.swift */,
 				DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */,
 				DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */,
+				DC9F7B5D233F89B100CCA38B /* FlightTableViewCell.swift */,
+				DC9F7B5E233F89B100CCA38B /* FlightTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 			children = (
 				DC9F7B4D233E2A7F00CCA38B /* Airport.swift */,
 				DC9F7B57233E75DF00CCA38B /* City.swift */,
+				DC9F7B5B233F6BBE00CCA38B /* Schedule.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0C47BA233BD44200AC4074 /* LaunchScreen.storyboard in Resources */,
+				DC9F7B60233F89B100CCA38B /* FlightTableViewCell.xib in Resources */,
 				DC0C47B7233BD44200AC4074 /* Assets.xcassets in Resources */,
 				DC0C47B5233BD43F00AC4074 /* Main.storyboard in Resources */,
 			);
@@ -279,6 +289,7 @@
 			files = (
 				DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */,
 				DC9F7B42233BEBCF00CCA38B /* DestinationSelectionViewController.swift in Sources */,
+				DC9F7B5C233F6BBE00CCA38B /* Schedule.swift in Sources */,
 				DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */,
 				DC9F7B56233E482E00CCA38B /* AirportTableViewCell.swift in Sources */,
 				DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */,
@@ -289,6 +300,7 @@
 				DC9F7B44233BEE7200CCA38B /* ResultsViewController.swift in Sources */,
 				DC9F7B54233E425100CCA38B /* AirportsViewController.swift in Sources */,
 				DC9F7B58233E75DF00CCA38B /* City.swift in Sources */,
+				DC9F7B5F233F89B100CCA38B /* FlightTableViewCell.swift in Sources */,
 				DC9F7B49233BF16A00CCA38B /* ResultTableViewCell.swift in Sources */,
 				DC9F7B46233BEE7D00CCA38B /* MapViewController.swift in Sources */,
 				DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */,
