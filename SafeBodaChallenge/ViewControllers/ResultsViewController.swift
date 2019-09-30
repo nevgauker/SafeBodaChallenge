@@ -50,8 +50,8 @@ class ResultsViewController: UIViewController,didPressViewMap {
         addBackButton()
         tableView.rowHeight = 200.0
         showLoader()
-        fetchSceduals()
-        //fakeFetchSceduals()
+        //fetchSceduals()
+        fakeFetchSceduals()
     }
     
     

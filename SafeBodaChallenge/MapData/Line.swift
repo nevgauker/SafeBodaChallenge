@@ -11,10 +11,12 @@ import UIKit
 struct  Point{
     var latitude:Double = 0.0
     var longitude:Double = 0.0
+    var name :String = ""
     
-    init(lat:Double,long:Double) {
+    init(lat:Double,long:Double,name:String) {
         latitude = lat
         longitude = long
+        self.name = name
     }
 
     
