@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		172C2AFCF9A4C95C0601BC03 /* Pods_SafeBodaChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C64FE30909ED698DAB8A1C3 /* Pods_SafeBodaChallenge.framework */; };
 		DC0C47B0233BD43F00AC4074 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */; };
-		DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0C47B1233BD43F00AC4074 /* ViewController.swift */; };
 		DC0C47B5233BD43F00AC4074 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B3233BD43F00AC4074 /* Main.storyboard */; };
 		DC0C47B7233BD44200AC4074 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B6233BD44200AC4074 /* Assets.xcassets */; };
 		DC0C47BA233BD44200AC4074 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0C47B8233BD44200AC4074 /* LaunchScreen.storyboard */; };
@@ -24,8 +23,6 @@
 		DC9F7B4B233D533A00CCA38B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4A233D533A00CCA38B /* Utils.swift */; };
 		DC9F7B4E233E2A7F00CCA38B /* Airport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4D233E2A7F00CCA38B /* Airport.swift */; };
 		DC9F7B50233E399A00CCA38B /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B4F233E399A00CCA38B /* Extenstions.swift */; };
-		DC9F7B52233E3E0200CCA38B /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B51233E3E0200CCA38B /* AppData.swift */; };
-		DC9F7B54233E425100CCA38B /* AirportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B53233E425100CCA38B /* AirportsViewController.swift */; };
 		DC9F7B56233E482E00CCA38B /* AirportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */; };
 		DC9F7B58233E75DF00CCA38B /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B57233E75DF00CCA38B /* City.swift */; };
 		DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */; };
@@ -43,7 +40,6 @@
 		C40CAC8E9F7BB326B690020C /* Pods-SafeBodaChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SafeBodaChallenge.release.xcconfig"; path = "Target Support Files/Pods-SafeBodaChallenge/Pods-SafeBodaChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		DC0C47AC233BD43F00AC4074 /* SafeBodaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SafeBodaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC0C47B1233BD43F00AC4074 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DC0C47B4233BD43F00AC4074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DC0C47B6233BD44200AC4074 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC0C47B9233BD44200AC4074 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,8 +55,6 @@
 		DC9F7B4A233D533A00CCA38B /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		DC9F7B4D233E2A7F00CCA38B /* Airport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Airport.swift; sourceTree = "<group>"; };
 		DC9F7B4F233E399A00CCA38B /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
-		DC9F7B51233E3E0200CCA38B /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
-		DC9F7B53233E425100CCA38B /* AirportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportsViewController.swift; sourceTree = "<group>"; };
 		DC9F7B55233E482E00CCA38B /* AirportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirportTableViewCell.swift; sourceTree = "<group>"; };
 		DC9F7B57233E75DF00CCA38B /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
 		DC9F7B59233E860B00CCA38B /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,7 +127,6 @@
 				DC0C47C1233BD51800AC4074 /* ViewControllers */,
 				DC0C47AF233BD43F00AC4074 /* AppDelegate.swift */,
 				DC9F7B4A233D533A00CCA38B /* Utils.swift */,
-				DC0C47B1233BD43F00AC4074 /* ViewController.swift */,
 				DC0C47B3233BD43F00AC4074 /* Main.storyboard */,
 				DC0C47B6233BD44200AC4074 /* Assets.xcassets */,
 				DC0C47B8233BD44200AC4074 /* LaunchScreen.storyboard */,
@@ -150,7 +143,6 @@
 				DC9F7B41233BEBCF00CCA38B /* DestinationSelectionViewController.swift */,
 				DC9F7B43233BEE7200CCA38B /* ResultsViewController.swift */,
 				DC9F7B45233BEE7D00CCA38B /* MapViewController.swift */,
-				DC9F7B53233E425100CCA38B /* AirportsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -159,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				DC0C47C3233BD54800AC4074 /* LufthansaAPI.swift */,
-				DC9F7B51233E3E0200CCA38B /* AppData.swift */,
 				DC908659233FDD9A005A9333 /* CountriesCache.swift */,
 			);
 			path = Singletons;
@@ -312,7 +303,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC0C47B2233BD43F00AC4074 /* ViewController.swift in Sources */,
 				DC90865A233FDD9A005A9333 /* CountriesCache.swift in Sources */,
 				DC9F7B42233BEBCF00CCA38B /* DestinationSelectionViewController.swift in Sources */,
 				DC9F7B5C233F6BBE00CCA38B /* Schedule.swift in Sources */,
@@ -325,14 +315,12 @@
 				DC9F7B50233E399A00CCA38B /* Extenstions.swift in Sources */,
 				DC9F7B40233BEBBA00CCA38B /* OriginSelectionViewController.swift in Sources */,
 				DC9F7B44233BEE7200CCA38B /* ResultsViewController.swift in Sources */,
-				DC9F7B54233E425100CCA38B /* AirportsViewController.swift in Sources */,
 				DC9F7B58233E75DF00CCA38B /* City.swift in Sources */,
 				DC9F7B5F233F89B100CCA38B /* FlightTableViewCell.swift in Sources */,
 				DC9F7B49233BF16A00CCA38B /* ResultTableViewCell.swift in Sources */,
 				DC9F7B63233FA2B000CCA38B /* Line.swift in Sources */,
 				DC9F7B46233BEE7D00CCA38B /* MapViewController.swift in Sources */,
 				DC9F7B5A233E860B00CCA38B /* CityTableViewCell.swift in Sources */,
-				DC9F7B52233E3E0200CCA38B /* AppData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

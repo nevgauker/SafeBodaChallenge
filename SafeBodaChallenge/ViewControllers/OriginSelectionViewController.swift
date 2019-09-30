@@ -13,6 +13,9 @@ extension OriginSelectionViewController:UITableViewDataSource {
         let city = cities[indexPath.row]
         cell.setupGUI()
         cell.updateData(city: city)
+        cell.contentView.alpha = 0.2
+        
+
         return cell
     }
     
@@ -29,12 +32,19 @@ extension OriginSelectionViewController:UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
+        UIView.animate(withDuration: 0.6) {
+             cell.contentView.alpha = 1.0
+        }
+
+       
+
         
         if indexPath.row >= cities.count - 1 {
             fetchCities()
         }
     
     }
+    
 }
 class OriginSelectionViewController: UIViewController {
     
@@ -55,11 +65,12 @@ class OriginSelectionViewController: UIViewController {
     
     func fetchCities() {
         
-        showLoader()
+        //showLoader()
         if LufthansaAPI.shared.needToFetchToken() {
             LufthansaAPI.shared.fetchToken(completion: {error,success in
                 LufthansaAPI.shared.fetchCities(index: self.index, completion: { error,cities in
-                    self.hideLoader()
+                   // self.hideLoader()
+
                     if error == nil {
                         if let theCities = cities {
                                self.cities.append(contentsOf: theCities)
@@ -73,7 +84,9 @@ class OriginSelectionViewController: UIViewController {
             })
         }else {
             LufthansaAPI.shared.fetchCities(index: self.index, completion: { error,cities in
-                self.hideLoader()
+
+               // self.hideLoader()
+                
                 if error == nil {
                     if let theCities = cities {
                         self.cities.append(contentsOf: theCities)
@@ -88,34 +101,6 @@ class OriginSelectionViewController: UIViewController {
         }
     }
             
-            
-        
-                
-                
-          
-
-                
-            
-            
-            
-//
-//            LufthansaAPI.shared.fetchCities(index: 0, completion: { error,cities in
-//                if error == nil {
-//                    if let theCities = cities {
-//                        self.cities.append(contentsOf: theCities)
-//                        DispatchQueue.main.async {
-//                            self.tableView.reloadData()
-//
-//                        }
-//                    }
-//                }
-//
-//
-//            })
-  //      }
-        
-       
-    
     func airportSelection(index:IndexPath) {
         
         let city = cities[index.row]

@@ -15,6 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "Back")
+
         if let token = Utils.loadToken() {
             LufthansaAPI.shared.setToken(token: token)
             LufthansaAPI.shared.fetchCountries(completion: { error, countries in

@@ -30,6 +30,7 @@ class CityTableViewCell: UITableViewCell {
         containerView.clipsToBounds = true
         containerView.layer.borderWidth = 0.5
         containerView.layer.borderColor = UIColor.lightGray.cgColor
+       
 
     }
     func updateData(city:City){

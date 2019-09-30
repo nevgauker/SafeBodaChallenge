@@ -8,7 +8,9 @@
 
 import UIKit
 
-
+protocol didPressViewMap {
+    func didPressViewMap(index:IndexPath)
+}
 
 extension ResultTableViewCell : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,6 +34,9 @@ class ResultTableViewCell: UITableViewCell {
     
     let cellTypeAndIdentifier = "FlightTableViewCell"
     var flights:[Flight] = [Flight]()
+    var delegate:didPressViewMap!
+    var index:IndexPath!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +48,9 @@ class ResultTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    @IBAction func didPressViewMap(_ sender: Any) {
+        delegate.didPressViewMap(index: self.index)
+    }
     func setupGUI() {
         flightsTableView.rowHeight = 50.0
         containerView.layer.cornerRadius = 15.0
@@ -50,8 +58,9 @@ class ResultTableViewCell: UITableViewCell {
         containerView.layer.borderWidth = 0.5
         containerView.layer.borderColor = UIColor.lightGray.cgColor
     }
-    func updateData(scedual:Schedule){
+    func updateData(scedual:Schedule,index:IndexPath){
         flights.removeAll()
+        self.index = index
         flights.append(contentsOf: scedual.flights)
         flightsTableView.reloadData()
     }

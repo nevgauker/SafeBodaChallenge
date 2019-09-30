@@ -20,6 +20,10 @@ struct Country {
         if let names = data["Names"] as? [String :Any] {
             if let val = names["Name"] as? [String :Any] {
                 name = val
+            }else if let val = names["Name"] as? [[String :Any]] {
+                if val.count > 0 {
+                    name = val[0]
+                }
             }
         }
         

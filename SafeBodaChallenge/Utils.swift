@@ -20,6 +20,16 @@ class Utils: NSObject {
         let keychainWrapper = KeychainWrapper.standard
 
         let retrievedString: String? = keychainWrapper.string(forKey:"token")
+        
+        let defaults = UserDefaults.standard
+
+        
+        if let expired = defaults.object(forKey: "expired") as? Date {
+            if  Date() > expired {
+                return nil
+            }
+        }
+        
         return retrievedString
         
     }

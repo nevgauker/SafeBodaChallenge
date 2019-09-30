@@ -21,9 +21,9 @@ struct Airport {
             if let val  = names["Name"] as? [[String : Any]]{
                 print(val)
                 name = val[0]["$"] as! String
+            }else if let val  = names["Name"] as? [String : Any]{
+                name = val["$"] as! String
             }
-            
-          
         }
         if let val  = data["AirportCode"] as? String{
             airportCode = val

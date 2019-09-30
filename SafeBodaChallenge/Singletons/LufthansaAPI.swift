@@ -52,14 +52,19 @@ final class LufthansaAPI: NSObject {
             .responseJSON { response in
                 debugPrint(response)
                 if let dict = response.result.value as? Dictionary<String,AnyObject>{
-                    
-                    print(dict)
                     let token:String =  dict["access_token"] as! String
                     _ = Utils.saveToken(token: token)
                     self.defaultHeaders["Authorization"] = "Bearer " + token
-                    let unixTimestamp:TimeInterval = dict["expires_in"] as! TimeInterval
-                    let date = Date(timeIntervalSince1970: unixTimestamp)
-                    print(date)
+                    let secs:Int = dict["expires_in"] as! Int
+                    
+                    let calendar = Calendar.current
+                    let date = calendar.date(byAdding: .second, value:secs , to: Date())
+                    
+                    let defaults = UserDefaults.standard
+                    
+                    defaults.set(date, forKey: "expired")
+                    defaults.synchronize()
+                    
                     completion(nil,true)
                 }
         }

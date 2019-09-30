@@ -14,6 +14,10 @@ class FlightTableViewCell: UITableViewCell {
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var arivalTimeLabel: UILabel!
+    
+    @IBOutlet weak var airlineNameLabel: UILabel!
+    @IBOutlet weak var flightNumberLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,6 +31,8 @@ class FlightTableViewCell: UITableViewCell {
     
     func updateData(flight:Flight){
         
+        airlineNameLabel.text = "Airline : \(flight.airlineID)"
+        flightNumberLabel.text = "Flight number : \(flight.flightNumber)"
         timeOfDepartureLabel.text = flight.departure.scheduledTimeLocal
         fromLabel.text =  flight.departure.airportCode
         

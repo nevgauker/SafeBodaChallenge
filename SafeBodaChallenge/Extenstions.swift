@@ -32,17 +32,29 @@ extension NSMutableAttributedString{
 
 extension UIViewController {
     
+    func addBackButton() {
+        let backBtn = UIBarButtonItem()
+        let image: UIImage = UIImage(named: "Back")!
+        backBtn.image = image
+        backBtn.action = #selector(popSelf)
+        backBtn.target = self
+        navigationItem.leftBarButtonItem = backBtn
+    }
+    @objc private func popSelf() {
+        navigationController?.popViewController(animated: true)
+        // do your stuff if you needed
+    }
+    
     func showLoader() {
-     //   ANLoader.showLoading("Loading", disableUI: true)
-
-//        ANLoader.pulseAnimation = true //It will animate your Loading
-//        ANLoader.activityColor = .red
-//        ANLoader.activityBackgroundColor = .blue
-//        ANLoader.activityTextColor = .clear
+        DispatchQueue.main.async {
+            ANLoader.showLoading("Loading", disableUI: true)
+        }
     }
     
     func hideLoader() {
-      // ANLoader.hide()
+        DispatchQueue.main.async {
+            ANLoader.hide()
+        }
     }
     
     

@@ -20,28 +20,28 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrt-S3-1Td">
-                        <rect key="frame" x="5" y="5" width="42" height="40"/>
+                        <rect key="frame" x="5" y="18" width="42" height="30"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVQ-9p-gV2">
-                        <rect key="frame" x="80" y="5" width="39.5" height="40"/>
+                        <rect key="frame" x="80" y="18" width="40" height="30"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="b4C-Vx-P2s"/>
+                            <constraint firstAttribute="height" constant="30" id="b4C-Vx-P2s"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-----&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ie6-E3-NCA">
-                        <rect key="frame" x="134" y="4" width="41" height="40"/>
+                        <rect key="frame" x="134.5" y="18" width="41" height="30"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVS-3s-ieN">
-                        <rect key="frame" x="189" y="4" width="50" height="40"/>
+                        <rect key="frame" x="189.5" y="18" width="50" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="1JJ-Fa-Lwb"/>
                         </constraints>
@@ -50,7 +50,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="40" translatesAutoresizingMaskIntoConstraints="NO" id="k3S-XK-pOl">
-                        <rect key="frame" x="268.5" y="5" width="42" height="40"/>
+                        <rect key="frame" x="268.5" y="18" width="42" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="42" id="zg1-ke-Gy2"/>
                         </constraints>
@@ -58,32 +58,69 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irr-U6-pIt">
+                        <rect key="frame" x="160" y="0.0" width="160" height="15"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Airplan" translatesAutoresizingMaskIntoConstraints="NO" id="cha-0Y-73m">
+                        <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="GJp-vT-YOK"/>
+                            <constraint firstAttribute="width" constant="15" id="JLi-kI-HwD"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hL3-UR-AlE">
+                        <rect key="frame" x="15" y="0.0" width="145" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="9Qy-KP-gR9"/>
+                            <constraint firstAttribute="width" constant="145" id="cg1-qC-0nK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="yrt-S3-1Td" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="0Ta-rv-ow4"/>
-                    <constraint firstItem="k3S-XK-pOl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="9Nu-L0-gZX"/>
-                    <constraint firstAttribute="bottom" secondItem="yrt-S3-1Td" secondAttribute="bottom" constant="4.5" id="KX0-PT-b5e"/>
+                    <constraint firstItem="yrt-S3-1Td" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="0Ta-rv-ow4"/>
+                    <constraint firstItem="Irr-U6-pIt" firstAttribute="baseline" secondItem="hL3-UR-AlE" secondAttribute="baseline" id="11x-HB-08Z"/>
+                    <constraint firstItem="Irr-U6-pIt" firstAttribute="firstBaseline" secondItem="hL3-UR-AlE" secondAttribute="firstBaseline" id="68f-No-94f"/>
+                    <constraint firstItem="k3S-XK-pOl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="9Nu-L0-gZX"/>
+                    <constraint firstAttribute="bottom" secondItem="yrt-S3-1Td" secondAttribute="bottom" constant="1.5" id="KX0-PT-b5e"/>
                     <constraint firstItem="YVS-3s-ieN" firstAttribute="leading" secondItem="Ie6-E3-NCA" secondAttribute="trailing" constant="14" id="KzY-4V-8t2"/>
                     <constraint firstItem="Ie6-E3-NCA" firstAttribute="leading" secondItem="VVQ-9p-gV2" secondAttribute="trailing" constant="14.5" id="PJ5-L2-j1y"/>
+                    <constraint firstItem="hL3-UR-AlE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TYl-2h-FZ2"/>
                     <constraint firstAttribute="trailing" secondItem="k3S-XK-pOl" secondAttribute="trailing" constant="9.5" id="ULk-Th-jyI"/>
-                    <constraint firstAttribute="bottom" secondItem="YVS-3s-ieN" secondAttribute="bottom" constant="5.5" id="euv-Ai-25U"/>
-                    <constraint firstItem="VVQ-9p-gV2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="i1N-4V-ZvF"/>
+                    <constraint firstItem="Irr-U6-pIt" firstAttribute="leading" secondItem="hL3-UR-AlE" secondAttribute="trailing" id="W9e-e9-2lI"/>
+                    <constraint firstAttribute="trailing" secondItem="Irr-U6-pIt" secondAttribute="trailing" id="a7O-vx-yub"/>
+                    <constraint firstItem="cha-0Y-73m" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eGK-G7-Igp"/>
+                    <constraint firstAttribute="bottom" secondItem="YVS-3s-ieN" secondAttribute="bottom" constant="1.5" id="euv-Ai-25U"/>
+                    <constraint firstItem="VVQ-9p-gV2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="i1N-4V-ZvF"/>
                     <constraint firstItem="VVQ-9p-gV2" firstAttribute="leading" secondItem="yrt-S3-1Td" secondAttribute="trailing" constant="33" id="juF-uS-n8v"/>
+                    <constraint firstItem="cha-0Y-73m" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="leE-lI-FfR"/>
                     <constraint firstItem="yrt-S3-1Td" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="mJc-al-rVW"/>
-                    <constraint firstItem="YVS-3s-ieN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="pop-sA-w7i"/>
-                    <constraint firstAttribute="bottom" secondItem="Ie6-E3-NCA" secondAttribute="bottom" constant="5.5" id="q8w-jS-RlS"/>
-                    <constraint firstAttribute="bottom" secondItem="VVQ-9p-gV2" secondAttribute="bottom" constant="4.5" id="t9W-0z-kwH"/>
-                    <constraint firstItem="Ie6-E3-NCA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="wWf-7v-EuX"/>
-                    <constraint firstAttribute="bottom" secondItem="k3S-XK-pOl" secondAttribute="bottom" constant="4.5" id="zti-OL-izV"/>
+                    <constraint firstItem="YVS-3s-ieN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="pop-sA-w7i"/>
+                    <constraint firstAttribute="bottom" secondItem="Ie6-E3-NCA" secondAttribute="bottom" constant="1.5" id="q8w-jS-RlS"/>
+                    <constraint firstAttribute="bottom" secondItem="VVQ-9p-gV2" secondAttribute="bottom" constant="1.5" id="t9W-0z-kwH"/>
+                    <constraint firstItem="Ie6-E3-NCA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="wWf-7v-EuX"/>
+                    <constraint firstItem="hL3-UR-AlE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="x16-aB-5Rw"/>
+                    <constraint firstAttribute="bottom" secondItem="k3S-XK-pOl" secondAttribute="bottom" constant="1.5" id="zti-OL-izV"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="airlineNameLabel" destination="hL3-UR-AlE" id="PgZ-Am-u3o"/>
                 <outlet property="arivalTimeLabel" destination="k3S-XK-pOl" id="xhi-Up-6B8"/>
+                <outlet property="flightNumberLabel" destination="Irr-U6-pIt" id="Jyl-6V-oTj"/>
                 <outlet property="fromLabel" destination="VVQ-9p-gV2" id="tEg-zh-5R7"/>
                 <outlet property="timeOfDepartureLabel" destination="yrt-S3-1Td" id="me1-jj-Qqy"/>
                 <outlet property="toLabel" destination="YVS-3s-ieN" id="8O9-Qw-piS"/>
             </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="Airplan" width="25" height="25"/>
+    </resources>
 </document>

@@ -11,8 +11,11 @@ import UIKit
 
 class DestinationSelectionViewController: OriginSelectionViewController {
 
+    
+    var origin:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        addBackButton()
         self.title = "Choose a city of destination"
         // Do any additional setup after loading the view.
     }
