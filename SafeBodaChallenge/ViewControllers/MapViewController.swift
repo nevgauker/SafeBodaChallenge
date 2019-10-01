@@ -8,22 +8,37 @@
 
 import UIKit
 import MapKit
+
+
+final class AirportAnnotation: NSObject, MKAnnotation {
+    var coordinate: CLLocationCoordinate2D = CLLocationCoordinate2D()
+    var title: String?
+    
+    init(title:String?){
+        self.title = title
+        super.init()
+
+    }
+    
+    
+}
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         guard annotation is MKPointAnnotation else { return nil }
         
-        let identifier = "Annotation"
-        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
-        
-        if annotationView == nil {
-            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-            annotationView!.canShowCallout = true
-        } else {
-            annotationView!.annotation = annotation
+        if let airportNnnotationView = mapView.dequeueReusableAnnotationView(withIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier) as? MKMarkerAnnotationView{
+            
+            airportNnnotationView.animatesWhenAdded = true
+            airportNnnotationView.titleVisibility = .adaptive
+            
+            return airportNnnotationView
+            
         }
         
-        return annotationView
+      
+        
+        return nil
     }
     
     
@@ -47,6 +62,7 @@ class MapViewController: UIViewController {
     var lines:[Line] = [Line]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
         addBackButton()
         mapView.delegate = self
         hanlCoordinatesFetch()
@@ -118,27 +134,27 @@ class MapViewController: UIViewController {
         var arr:[MKAnnotation] = [MKAnnotation]()
         
             for (index,line) in self.lines.enumerated() {
-                let london = MKPointAnnotation()
-                london.title = line.start.name
+                
+                let airport = AirportAnnotation(title:  line.start.name)
                 if index == 0 {
                     //add pin  to first point (departue)
-                    london.coordinate = CLLocationCoordinate2D(latitude: line.start.latitude, longitude: line.start.longitude)
+                    airport.coordinate = CLLocationCoordinate2D(latitude: line.start.latitude, longitude: line.start.longitude)
 
                 }else {
                     //add pin  to second point (arival)
-                      london.coordinate = CLLocationCoordinate2D(latitude: line.end
+                      airport.coordinate = CLLocationCoordinate2D(latitude: line.end
                         .latitude, longitude: line.end.longitude)
-                    london.title = line.end.name
+                    airport.title = line.end.name
 
                 }
-                arr.append(london)
+                arr.append(airport)
                 
                 if index == self.lines.count - 1 {
                     //last line
-                    let london2 = MKPointAnnotation()
-                    london2.title = line.start.name
-                    london2.coordinate = CLLocationCoordinate2D(latitude: line.start.latitude, longitude: line.start.longitude)
-                    arr.append(london2)
+                    let airport = AirportAnnotation(title:  line.start.name)
+                    airport.title = line.start.name
+                    airport.coordinate = CLLocationCoordinate2D(latitude: line.start.latitude, longitude: line.start.longitude)
+                    arr.append(airport)
                 }
             }
         self.mapView.addAnnotations(arr)

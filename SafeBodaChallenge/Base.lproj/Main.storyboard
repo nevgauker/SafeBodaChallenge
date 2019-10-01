@@ -299,16 +299,6 @@
                                                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xCb-Ko-ua2">
                                                             <rect key="frame" x="1" y="1" width="402" height="152"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <prototypes>
-                                                                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="50" id="e59-nU-hhD">
-                                                                    <rect key="frame" x="0.0" y="28" width="402" height="50"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e59-nU-hhD" id="ivt-oE-qRX">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="402" height="50"/>
-                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                    </tableViewCellContentView>
-                                                                </tableViewCell>
-                                                            </prototypes>
                                                             <connections>
                                                                 <outlet property="dataSource" destination="ewu-iC-sGo" id="MtV-kD-J8p"/>
                                                             </connections>

@@ -33,16 +33,10 @@ class FlightTableViewCell: UITableViewCell {
         
         airlineNameLabel.text = "Airline : \(flight.airlineID)"
         flightNumberLabel.text = "Flight number : \(flight.flightNumber)"
-        timeOfDepartureLabel.text = flight.departure.scheduledTimeLocal
+        timeOfDepartureLabel.text = Utils.serverdateSringToDisplay(dateStr: flight.departure.scheduledTimeLocal)
         fromLabel.text =  flight.departure.airportCode
-        
-        arivalTimeLabel.text = flight.arrival.scheduledTimeLocal
+        arivalTimeLabel.text =  Utils.serverdateSringToDisplay(dateStr: flight.arrival.scheduledTimeLocal)
         toLabel.text =  flight.arrival.airportCode
-        
-        
-        
-        
-    
     }
     
 }

@@ -11,8 +11,8 @@ import UIKit
 
 class DestinationSelectionViewController: OriginSelectionViewController {
 
+    var destination:String = ""
     
-    var origin:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         addBackButton()
@@ -20,7 +20,16 @@ class DestinationSelectionViewController: OriginSelectionViewController {
         // Do any additional setup after loading the view.
     }
     override func didSelectAirport(airport:String){
+        destination = airport
         performSegue(withIdentifier: "resultsSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "resultsSegue" {
+            let vc = segue.destination  as! ResultsViewController
+            vc.destination = destination
+            vc.origin = self.origin
+        }
     }
 
 }

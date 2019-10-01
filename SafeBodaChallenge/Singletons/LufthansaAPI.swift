@@ -186,6 +186,9 @@ final class LufthansaAPI: NSObject {
                         }
                         completion(nil,sceduals)
                     }else {
+                        if dict["ProcessingErrors"] != nil {
+                            completion("ProcessingErrors",nil)
+                        }
                         completion(response.error?.localizedDescription,nil)
                     }
                 }else {

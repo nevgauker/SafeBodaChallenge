@@ -53,6 +53,8 @@ class OriginSelectionViewController: UIViewController {
     var index = 0
     
     var cities:[City] = [City]()
+    
+    var origin:String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -105,7 +107,7 @@ class OriginSelectionViewController: UIViewController {
         
         let city = cities[index.row]
         
-        let alertController = UIAlertController(title: "Airport", message: "Select an air port", preferredStyle: .actionSheet)
+        let alertController = UIAlertController(title: "Airport", message: "Select an airport", preferredStyle: .actionSheet)
         
         
         for airport in city.airports {
@@ -128,7 +130,16 @@ class OriginSelectionViewController: UIViewController {
     }
     
     func didSelectAirport(airport:String){
+        self.origin = airport
         performSegue(withIdentifier: "destinationSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "destinationSegue" {
+            
+            let vc = segue.destination as! DestinationSelectionViewController
+            vc.origin = self.origin
+        }
     }
 
 }

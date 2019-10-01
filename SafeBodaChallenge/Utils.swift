@@ -50,6 +50,23 @@ class Utils: NSObject {
         
         
     }
+    
+    class func serverdateSringToDisplay(dateStr:String)->String{
+        let dateFormatter = DateFormatter()
+        
+        
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+        let date = dateFormatter.date(from: dateStr)
+        dateFormatter.dateFormat = "MM-dd HH:mm"
+
+        
+        let str = dateFormatter.string(from: date!)
+        return str
+        
+        
+        
+        
+    }
         
         
         

@@ -47,11 +47,12 @@ class ResultsViewController: UIViewController,didPressViewMap {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "\(origin) -> \(destination)"
         addBackButton()
         tableView.rowHeight = 200.0
         showLoader()
-        //fetchSceduals()
-        fakeFetchSceduals()
+        fetchSceduals()
+        //fakeFetchSceduals()
     }
     
     
